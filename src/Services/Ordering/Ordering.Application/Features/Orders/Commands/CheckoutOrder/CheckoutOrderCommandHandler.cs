@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using MediatR;
 using Ordering.Application.Contracts.Infrastructure;
-using Ordering.Application.Contracts.Persistance;
+using Ordering.Application.Contracts.Persistence;
 using Ordering.Application.Models;
 using Ordering.Domain.Entities;
 using Microsoft.Extensions.Logging;

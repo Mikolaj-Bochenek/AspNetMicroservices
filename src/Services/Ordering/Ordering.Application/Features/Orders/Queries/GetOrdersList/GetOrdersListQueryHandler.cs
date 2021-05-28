@@ -4,7 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using AutoMapper;
 using MediatR;
-using Ordering.Application.Contracts.Persistance;
+using Ordering.Application.Contracts.Persistence;
 using Ordering.Application.Features.Orders.Queries.GetOrderList;
 
 namespace Ordering.Application.Features.Orders.Queries.GetOrdersList

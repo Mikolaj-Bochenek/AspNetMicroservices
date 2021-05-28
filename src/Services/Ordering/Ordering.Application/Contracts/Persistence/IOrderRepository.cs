@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Ordering.Application.Contracts.Persistence;
 using Ordering.Domain.Entities;
 
-namespace Ordering.Application.Contracts.Persistance
+namespace Ordering.Application.Contracts.Persistence
 {
     public interface IOrderRepository : IAsyncRepository<Order>
     {
