@@ -29,6 +29,8 @@ namespace Basket.API
             services.AddSwaggerGen(c => c.SwaggerDoc("v1", new OpenApiInfo { Title = "Basket.API", Version = "v1" }));
 
             services.AddScoped<IBasketRepository, BasketRepository>();
+
+            services.AddAutoMapper(typeof(Startup));
             
             services.AddGrpcClient<DiscountProtoService.DiscountProtoServiceClient>(options =>
                 options.Address = new Uri(Configuration["GrpcSettings:DiscountUrl"]));
@@ -54,7 +56,7 @@ namespace Basket.API
                 app.UseSwaggerUI(c => 
                     c.SwaggerEndpoint("/swagger/v1/swagger.json", "Basket.API v1"));
             }
-
+            
             app.UseRouting();
             app.UseAuthorization();
             app.UseEndpoints(endpoints => endpoints.MapControllers());
